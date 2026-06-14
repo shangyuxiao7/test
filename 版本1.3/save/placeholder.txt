@@ -1,0 +1,2 @@
+This directory is used as the default empty save directory for exported builds.
+The game will copy these files to user://save/ on first run if no save exists.
