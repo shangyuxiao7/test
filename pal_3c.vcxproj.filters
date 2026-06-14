@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\battle">
+      <UniqueIdentifier>{450be1a0-5436-44ff-af80-1bc7afdc2e55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\character">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-7890-abcd-ef1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\config">
+      <UniqueIdentifier>{67eb41bc-66f4-4343-86a4-5a4c78432d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\foundation">
+      <UniqueIdentifier>{b2c3d4e5-f6a7-8901-bcde-f23456789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\game">
+      <UniqueIdentifier>{3a5e8f12-4c1b-4c2e-9a7d-2e8f5b3c1d4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\inventory">
+      <UniqueIdentifier>{f69d89d5-f2ad-4980-a5a1-50f61cf64432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\world">
+      <UniqueIdentifier>{ea02dbdd-7d25-40bc-9920-dd260df9ac1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ui">
+      <UniqueIdentifier>{c4d5e6f7-a8b9-0123-cdef-456789012345}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\config\battle_rewards.json">
+      <Filter>源文件\config</Filter>
+    </None>
+    <None Include="assets\config\enemies.json">
+      <Filter>源文件\config</Filter>
+    </None>
+    <None Include="assets\config\items.json">
+      <Filter>源文件\config</Filter>
+    </None>
+    <None Include="assets\config\maps.json">
+      <Filter>源文件\config</Filter>
+    </None>
+    <None Include="assets\config\skills.json">
+      <Filter>源文件\config</Filter>
+    </None>
+    <None Include="AGENTS.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="foundation\ConfigLoader.h">
+      <Filter>源文件\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="foundation\ISerializable.h">
+      <Filter>源文件\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="foundation\JsonUtils.h">
+      <Filter>源文件\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="foundation\JsonValue.h">
+      <Filter>源文件\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="foundation\SaveLoadSystem.h">
+      <Filter>源文件\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\Action.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\AICharacter.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\Attributes.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\BattleConfigLoader.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\BattleDataTables.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\BattleManager.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\BattleSession.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\Character.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\EnemyFactory.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\GameController.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\GameEvent.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\ICombatant.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\PlayerCharacter.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\SkillLibrary.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\StatusEffect.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\battle\TurnManager.h">
+      <Filter>源文件\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="core\character\CharacterConfigLoader.h">
+      <Filter>源文件\character</Filter>
+    </ClInclude>
+    <ClInclude Include="core\character\CharacterDataTables.h">
+      <Filter>源文件\character</Filter>
+    </ClInclude>
+    <ClInclude Include="core\character\Equipment.h">
+      <Filter>源文件\character</Filter>
+    </ClInclude>
+    <ClInclude Include="core\character\GrowthCurve.h">
+      <Filter>源文件\character</Filter>
+    </ClInclude>
+    <ClInclude Include="core\character\PartyManager.h">
+      <Filter>源文件\character</Filter>
+    </ClInclude>
+    <ClInclude Include="core\character\PartyMember.h">
+      <Filter>源文件\character</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\BattleContext.h">
+      <Filter>源文件\game</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\BattleRewardTable.h">
+      <Filter>源文件\game</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\GameManager.h">
+      <Filter>源文件\game</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\EventBus.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\InventoryManager.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\Item.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\ItemConfigLoader.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\ItemDatabase.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\ItemDataTables.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\inventory\Types.h">
+      <Filter>源文件\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\Entity.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\MapData.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\MapInstance.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\RoomGraph.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\WorldConfigLoader.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\WorldEvent.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\WorldFacade.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\world\WorldManager.h">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ui\BattleConsoleUI.h">
+      <Filter>源文件\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ui\GameConsoleUI.h">
+      <Filter>源文件\ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="foundation\ConfigLoader.cpp">
+      <Filter>源文件\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="foundation\JsonUtils.cpp">
+      <Filter>源文件\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="foundation\JsonValue.cpp">
+      <Filter>源文件\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="foundation\SaveLoadSystem.cpp">
+      <Filter>源文件\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="core\battle\BattleConfigLoader.cpp">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="core\battle\BattleDataTables.cpp">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="core\battle\BattleSession.cpp">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="core\battle\Character.cpp">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="core\character\CharacterConfigLoader.cpp">
+      <Filter>源文件\character</Filter>
+    </ClCompile>
+    <ClCompile Include="core\character\GrowthCurve.cpp">
+      <Filter>源文件\character</Filter>
+    </ClCompile>
+    <ClCompile Include="core\character\PartyManager.cpp">
+      <Filter>源文件\character</Filter>
+    </ClCompile>
+    <ClCompile Include="core\character\PartyMember.cpp">
+      <Filter>源文件\character</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\BattleRewardTable.cpp">
+      <Filter>源文件\game</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\GameManager.cpp">
+      <Filter>源文件\game</Filter>
+    </ClCompile>
+    <ClCompile Include="core\inventory\EventBus.cpp">
+      <Filter>源文件\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="core\inventory\InventoryManager.cpp">
+      <Filter>源文件\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="core\inventory\ItemConfigLoader.cpp">
+      <Filter>源文件\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="core\inventory\ItemDatabase.cpp">
+      <Filter>源文件\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="core\inventory\ItemDataTables.cpp">
+      <Filter>源文件\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\Entity.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\MapData.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\MapInstance.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\RoomGraph.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\WorldConfigLoader.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\WorldFacade.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\world\WorldManager.cpp">
+      <Filter>源文件\world</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
