@@ -1,0 +1,34 @@
+{
+    "curves": [
+        {
+            "id": "standard",
+            "hpFactor": 1.0,
+            "qiFactor": 1.0,
+            "atkFactor": 1.0,
+            "defFactor": 1.0,
+            "spdFactor": 1.0,
+            "baseExp": 100,
+            "expFactor": 1.5
+        },
+        {
+            "id": "mage",
+            "hpFactor": 0.8,
+            "qiFactor": 1.5,
+            "atkFactor": 1.2,
+            "defFactor": 0.7,
+            "spdFactor": 0.9,
+            "baseExp": 100,
+            "expFactor": 1.5
+        },
+        {
+            "id": "tank",
+            "hpFactor": 1.5,
+            "qiFactor": 0.8,
+            "atkFactor": 0.9,
+            "defFactor": 1.3,
+            "spdFactor": 0.7,
+            "baseExp": 100,
+            "expFactor": 1.5
+        }
+    ]
+}

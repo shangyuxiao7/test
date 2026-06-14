@@ -1,0 +1,161 @@
+{
+    "maps": [
+        {
+            "id": "demo_village",
+            "name": "起始村庄",
+            "rooms": [
+                {
+                    "id": "village_start",
+                    "name": "李逍遥的家",
+                    "description": "一个宁静的村庄小屋，阳光透过窗户洒进来。桌上放着一把旧剑和一封未写完的信。",
+                    "exits": [
+                        { "targetRoomId": "village_square", "description": "走出家门，前往村庄广场" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": [
+                        { "type": "DIALOGUE", "param1": "home_wake_up" }
+                    ]
+                },
+                {
+                    "id": "village_square",
+                    "name": "村庄广场",
+                    "description": "村庄中央的小广场，几个村民在闲聊。远处传来铁匠铺的敲打声。",
+                    "exits": [
+                        { "targetRoomId": "village_start", "description": "回家" },
+                        { "targetRoomId": "village_armory", "description": "去铁匠铺" },
+                        { "targetRoomId": "village_east_gate", "description": "走向东门" },
+                        { "targetRoomId": "village_west_gate", "description": "走向西门" }
+                    ],
+                    "entities": [
+                        { "id": "zhao_linger", "name": "赵灵儿", "type": "NPC", "description": "一位身穿白衣的少女，神情温柔，似乎在等待什么人", "eventId": "join_zhao_linger" }
+                    ],
+                    "onEnterPipeline": []
+                },
+                {
+                    "id": "village_armory",
+                    "name": "铁匠铺",
+                    "description": "铁匠铺里传来叮叮当当的打铁声。墙角堆满了各种工具和半成品武器。",
+                    "exits": [
+                        { "targetRoomId": "village_square", "description": "返回广场" }
+                    ],
+                    "entities": [
+                        { "id": "weapon_chest", "name": "武器箱", "type": "Chest", "description": "一个陈旧的木箱，上面刻着'借还自理'", "eventId": "iron_sword" }
+                    ],
+                    "onEnterPipeline": []
+                },
+                {
+                    "id": "village_east_gate",
+                    "name": "村庄东门",
+                    "description": "东门通向村外的黑森林，守卫提醒你要小心林中的野兽。",
+                    "exits": [
+                        { "targetRoomId": "village_square", "description": "返回广场" },
+                        { "targetRoomId": "forest_entry", "targetMapId": "demo_forest", "description": "前往黑森林" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": [
+                        { "type": "BATTLE", "param1": "novice", "param2": 1 }
+                    ]
+                },
+                {
+                    "id": "village_west_gate",
+                    "name": "村庄西门",
+                    "description": "西门通向远处的仙山，云雾缭绕，隐约可见山顶的道观。",
+                    "exits": [
+                        { "targetRoomId": "village_square", "description": "返回广场" },
+                        { "targetRoomId": "mountain_foot", "targetMapId": "demo_mountain", "description": "前往仙山" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": []
+                }
+            ]
+        },
+        {
+            "id": "demo_forest",
+            "name": "黑森林",
+            "rooms": [
+                {
+                    "id": "forest_entry",
+                    "name": "森林入口",
+                    "description": "茂密的树林遮天蔽日，空气中弥漫着潮湿的霉味。脚下的落叶发出沙沙的响声。",
+                    "exits": [
+                        { "targetRoomId": "forest_clearing", "description": "沿着小路深入" },
+                        { "targetRoomId": "village_east_gate", "targetMapId": "demo_village", "description": "返回村庄东门" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": []
+                },
+                {
+                    "id": "forest_clearing",
+                    "name": "林间空地",
+                    "description": "一片被月光照亮的林间空地，中央有一个破旧的祭坛。四周安静得可怕。",
+                    "exits": [
+                        { "targetRoomId": "forest_entry", "description": "退回森林入口" },
+                        { "targetRoomId": "forest_cave", "description": "前往洞穴" }
+                    ],
+                    "entities": [
+                        { "id": "armor_chest", "name": "遗落铠甲", "type": "Chest", "description": "一副被遗忘在祭坛旁的铠甲，似乎曾经属于某位战士", "eventId": "silver_armor" }
+                    ],
+                    "onEnterPipeline": [
+                        { "type": "BATTLE", "param1": "elite", "param2": 1 }
+                    ]
+                },
+                {
+                    "id": "forest_cave",
+                    "name": "洞穴深处",
+                    "description": "洞穴深处传来低沉的呼吸声，墙壁上闪烁着奇异的荧光。这里似乎连接着另一个世界。",
+                    "exits": [
+                        { "targetRoomId": "forest_clearing", "description": "退回林间空地" },
+                        { "targetRoomId": "mountain_peak", "targetMapId": "demo_mountain", "description": "穿过洞穴，前往仙山" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": []
+                }
+            ]
+        },
+        {
+            "id": "demo_mountain",
+            "name": "仙山",
+            "rooms": [
+                {
+                    "id": "mountain_foot",
+                    "name": "仙山脚下",
+                    "description": "仙山脚下桃花盛开，一条蜿蜒的石阶通向云端。空气中弥漫着淡淡的花香。",
+                    "exits": [
+                        { "targetRoomId": "mountain_path", "description": "开始登山" },
+                        { "targetRoomId": "village_west_gate", "targetMapId": "demo_village", "description": "返回村庄西门" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": []
+                },
+                {
+                    "id": "mountain_path",
+                    "name": "山道",
+                    "description": "山道越来越陡，云雾中隐约可见一座古老的道观。传说这里封印着远古的妖兽。",
+                    "exits": [
+                        { "targetRoomId": "mountain_foot", "description": "下山" },
+                        { "targetRoomId": "mountain_peak", "description": "登上山顶" }
+                    ],
+                    "entities": [
+                        { "id": "shoes_chest", "name": "道观宝箱", "type": "Chest", "description": "道观角落里的一个精致木盒，上面刻着道家符文", "eventId": "speed_boots" }
+                    ],
+                    "onEnterPipeline": [
+                        { "type": "BATTLE", "param1": "boss", "param2": 1 }
+                    ]
+                },
+                {
+                    "id": "mountain_peak",
+                    "name": "仙山之巅",
+                    "description": "山顶视野开阔，三座山峰在云雾中若隐若现。这里可以俯瞰整个世界。",
+                    "exits": [
+                        { "targetRoomId": "mountain_path", "description": "返回山道" },
+                        { "targetRoomId": "forest_cave", "targetMapId": "demo_forest", "description": "从后山小路前往黑森林" }
+                    ],
+                    "entities": [],
+                    "onEnterPipeline": [
+                        { "type": "DIALOGUE", "param1": "peak_narration" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

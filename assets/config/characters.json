@@ -1,0 +1,37 @@
+{
+    "characters": [
+        {
+            "id": "li_xiaoyao",
+            "name": "李逍遥",
+            "baseHp": 150,
+            "baseQi": 50,
+            "baseSpeed": 10,
+            "baseAttack": 15,
+            "baseDefense": 8,
+            "initialSkills": ["sword_attack", "wine_splash"],
+            "growthCurveId": "standard"
+        },
+        {
+            "id": "zhao_linger",
+            "name": "赵灵儿",
+            "baseHp": 120,
+            "baseQi": 80,
+            "baseSpeed": 8,
+            "baseAttack": 12,
+            "baseDefense": 6,
+            "initialSkills": ["spirit_spell", "heal_rain"],
+            "growthCurveId": "mage"
+        },
+        {
+            "id": "wang_xiaohu",
+            "name": "王小虎",
+            "baseHp": 180,
+            "baseQi": 40,
+            "baseSpeed": 7,
+            "baseAttack": 18,
+            "baseDefense": 10,
+            "initialSkills": ["tiger_strike"],
+            "growthCurveId": "tank"
+        }
+    ]
+}
